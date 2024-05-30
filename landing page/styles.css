@@ -1,0 +1,231 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #001418;
+    color: white;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    padding-right: 1rem;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background: white;
+    color: #151515;
+}
+
+main {
+    padding-top: 4rem; /* Space for fixed header */
+}
+
+#home {
+    background: url('zoro1.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay effect */
+}
+
+#home h2 {
+    font-size: 3rem;
+    margin: 0;
+    z-index: 1;
+    position: relative;
+}
+
+#home p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    z-index: 1;
+    position: relative;
+}
+
+#home .cta-button {
+    display: inline-block;
+    background: #ffcc00;
+    color: #151515;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 0.75rem 2rem;
+    border-radius: 5px;
+    margin-top: 2rem;
+    transition: background 0.3s, color 0.3s;
+    z-index: 1;
+    position: relative;
+}
+
+#home .cta-button:hover {
+    background: #e1072b;
+    color: #55e700;
+    filter: drop-shadow(0 0 0.55rem black);
+}
+
+#latest, #genres, #contact {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.anime-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.anime-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.anime-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.anime-card h3 {
+    font-size: 1.2rem;
+    color: #1e3c72;
+    margin-top: 0.5rem;
+}
+
+.genres-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.genres-list li {
+    background: #ffcc00;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.genres-list li:hover {
+    background: #1e3c72;
+}
+
+.genres-list li a {
+    color: #1e3c72;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.genres-list li:hover a {
+    color: #ffcc00;
+}
+
+footer {
+    background: #151515;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    
+    width: 76.9rem;
+    bottom: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background: #ffcc00;
+    color: #1e3c72;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #e6b800;
+}
